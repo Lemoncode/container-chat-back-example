@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/content/app.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chat">
+        <div class="chat__rooms">
+            <label>Available Rooms</label>
+            <ul class="rooms-container" id="rooms"></ul>
+        </div>
+        <div class="chat__room-selector">
+            <span id="selectedroom"></span>
+            <form id="enrolmentform" class="enrolment">
+                <div class="enrolment__field">
+                    <label for="user">Alias enrolment:</label>
+                    <input class="elronment__field-input" id="userid" type="text">
+                </div>
+                <button id="enrolmentsubmit" class="enrolment__submit">Add to room</button>
+            </form>
+        </div>
+        <div class="chat__main messages-container" id="messages"></div>
+        <div class="chat__sender message-sender">
+            <textarea class="message-sender__text" id="message"></textarea>
+            <button id="sendbutton" class="message-sender__submit message-sender__submit--hover message-sender__submit--active">
+                send
+            </button>
+        </div>
+    </div>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
