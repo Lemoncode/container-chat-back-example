@@ -32,8 +32,8 @@ jobs:
         run: docker build --tag back .
       - name: Tags
         run: |
-          docker tag back "$DOCKER_USER/backend-chat-ci-cd:${{ github.sha }}"
-          docker tag back "$DOCKER_USER/backend-chat-ci-cd:latest"
+          docker tag back "$DOCKER_USER/container-chat-back-example:${{ github.sha }}"
+          docker tag back "$DOCKER_USER/container-chat-back-example:latest"
       - name: Push
         run: |
           docker push "$DOCKER_USER/backend-chat-ci-cd:${{ github.sha }}"
