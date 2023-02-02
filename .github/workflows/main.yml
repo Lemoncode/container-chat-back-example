@@ -32,9 +32,9 @@ jobs:
         run: docker build --tag backend-chat-ci-cd .
       - name: Tags
         run: |
-          docker tag backend-chat-ci-cd "$DOCKER_USER/backend-chat-ci-cd:${{ github.sha }}"
-          docker tag backend-chat-ci-cd "$DOCKER_USER/backend-chat-ci-cd:latest"
+            docker tag back ${{ secrets.DOCKER_USER }}/back:${{ github.sha }}
+            docker tag back ${{ secrets.DOCKER_USER }}/back:latest
       - name: Push
         run: |
-          docker push "$DOCKER_USER/backend-chat-ci-cd:${{ github.sha }}"
-          docker push "$DOCKER_USER/backend-chat-ci-cd:latest"
+           docker push ${{ secrets.DOCKER_USER }}/back:${{ github.sha }}
+           docker push ${{ secrets.DOCKER_USER }}/back:latest
