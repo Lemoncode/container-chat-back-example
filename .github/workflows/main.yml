@@ -33,7 +33,7 @@ jobs:
         run: docker build --tag back .
       - name: Tags
         run: |
-          docker tag back "secrets.DOCKER_USER"/back:${{ github.sha }}
+          docker tag back "${{ secrets.docker_user }}/back:${{ github.sha }}"
           docker tag back ${{ secrets.DOCKER_USER }}/back:latest
       - name: Push
         run: |
