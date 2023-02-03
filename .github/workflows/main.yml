@@ -38,3 +38,4 @@ jobs:
         run: |
            docker push adrianaab/back:${{ github.sha }}
            docker push adrianaab/back::latest
+           #
