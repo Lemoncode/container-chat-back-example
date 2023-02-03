@@ -38,6 +38,6 @@ jobs:
             #docker tag back adrianaab/back:latest
       - name: Push
         run: |
-           docker push adrianaab/back:${{ github.sha }}
+           docker push adrianaab/back .:${{ github.sha }}
            #docker push adrianaab/back:latest
            
