@@ -1,7 +1,7 @@
 FROM node
-WORKDIR /opt/back
+WORKDIR ./back
 COPY . .
-RUN chown -R node:node /opt/back
+RUN chown -R node:node ./back
 RUN npm install
 EXPOSE 3000
 ENTRYPOINT ["npm", "start"]
