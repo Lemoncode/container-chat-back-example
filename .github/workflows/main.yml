@@ -33,9 +33,9 @@ jobs:
         run: docker build -t back .
       - name: Tags
         run: |
-            docker tag back /back:${{ github.sha }}
-            docker tag back /back:latest
+            docker tag back back/back:${{ github.sha }}
+            docker tag back back/back:latest
       - name: Push
         run: |
-            docker push /back:${{ github.sha }}
-            docker push /back:latest
+            docker push back/back:${{ github.sha }}
+            docker push back/back:latest
