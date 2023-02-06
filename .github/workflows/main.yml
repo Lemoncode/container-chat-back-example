@@ -37,5 +37,5 @@ jobs:
             docker tag back ${{ secrets.DOCKER_USER }} back:latest
       - name: Push
         run: |
-            docker push back:${{ github.sha }}
-            docker push back:latest
+            docker push ${{ secrets.DOCKER_USER }} back:${{ github.sha }}
+            docker push ${{ secrets.DOCKER_USER }} back:latest
